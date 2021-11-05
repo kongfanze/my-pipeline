@@ -1,12 +1,8 @@
 pipeline {
-  agent {
-    node {
-      label 'sip'
-    }
-
-  }
+  agent none
   stages {
     stage('test') {
+      agent {label 'sip'}
       steps {
         sh 'echo hello world'
       }
